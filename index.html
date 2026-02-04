@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afham Ansari</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-content">
+            <a href="#home" class="logo"></a>
+            <div class="nav-links">
+                <a href="#home" class="nav-link active" data-page="home">Home</a>
+                <a href="#projects" class="nav-link" data-page="projects">Projects</a>
+                <a href="#contact" class="nav-link" data-page="contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Container -->
+    <main class="page-container">
+        
+        <!-- Home Page -->
+        <section id="home" class="page active">
+            <div class="home-content">
+                <div class="home-left">
+                    <div class="illustration">
+                        <img src="Assets/avatar.svg" alt="Avatar" class="avatar-img">
+                    </div>
+                </div>
+                <div class="home-right">
+                    <h1 class="title">
+                        <span class="greeting">Hello there,</span>
+                        <span class="name">I'm Afham</span>
+                    </h1>
+                    <p class="bio">
+                        I’m 20, and endlessly curious about how things work. I build with code, circuits, and ideas — shaping 
+                        thoughts into robots, embedded systems, web apps, games, 3D designs and art.
+                        Outside the workshop, I wander through art, literature, music, history, and philosophy — searching 
+                        for the meaning behind things.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="#projects" class="btn btn-primary">View My Work</a>
+                        <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Decorative elements -->
+            <div class="bg-shape shape-1"></div>
+            <div class="bg-shape shape-2"></div>
+        </section>
+
+        <!-- Projects Page -->
+        <section id="projects" class="page">
+            <div class="projects-content">
+                <div class="section-header">
+                    <h2 class="section-title">Selected Projects</h2>
+                    <p class="section-subtitle">A small collection of my hand picked projects from many</p>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Projects will be dynamically loaded from projects.json -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Page -->
+        <section id="contact" class="page">
+            <div class="contact-content">
+                <div class="contact-left">
+                    <h2 class="section-title">Contact me</h2>
+                    <p class="contact-intro">
+                        I'd love to hear from you! Whether it's a project collaboration, 
+                        a question, or just to say hi – feel free to reach out.
+                    </p>
+                    
+                    <div class="contact-illustration">
+                        <img src="Assets/envelop.svg" alt="Envelope" class="envelope-img">
+                    </div>
+                </div>
+
+                <div class="contact-right">
+                    <div class="contact-info-card">
+                        <h3 class="contact-card-title">Get in Touch</h3>
+                        
+                        <div class="contact-methods">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="5" width="18" height="14" rx="2" />
+                                        <path d="M3 7l9 6 9-6" />
+                                    </svg>
+                                </div>
+                                <div class="contact-details">
+                                    <span class="contact-label">Email</span>
+                                    <a href="mailto:afhamansari1984@gmail.com" class="contact-value">afhamansari1984@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                                    </svg>
+                                </div>
+                                <div class="contact-details">
+                                    <span class="contact-label">Phone</span>
+                                    <a href="tel:+91 7355332271" class="contact-value">+91 7355332271</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-cta">
+                            <p class="cta-text">Prefer a different platform?</p>
+                            <p class="cta-subtext">Sorry but these are the only ways to contact me</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Project Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <div class="modal-body">
+                <div class="modal-image-container">
+                    <div class="modal-project-image">
+                        <div class="placeholder-image"></div>
+                    </div>
+                </div>
+                <div class="modal-header">
+                    <span class="modal-number"></span>
+                    <h2 class="modal-title"></h2>
+                </div>
+                <div class="modal-tags"></div>
+                <p class="modal-description"></p>
+                <div class="modal-features">
+                    <h3>Key Features</h3>
+                    <ul class="features-list"></ul>
+                </div>
+                <div class="modal-links">
+                    <a href="#" class="modal-link modal-link-primary" id="githubLink" target="_blank" rel="noopener noreferrer">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        View on GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; Afham Ansari. Crafted with care.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
