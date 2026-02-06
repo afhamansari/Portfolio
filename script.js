@@ -13,7 +13,7 @@ let projectsData = [
             "Modular design"
         ],
         "link": "https://github.com/afhamansari/Evo-fox-line-follower-",
-        "image": "assets/project1.jpeg"
+        "image": "Assets/project1.jpeg"
     },
     {
         "id": 2,
@@ -27,7 +27,7 @@ let projectsData = [
             "Versatile applications",
         ],
         "link": "https://github.com/afhamansari/Tracy",
-        "image": "assets/project2.jpeg"
+        "image": "Assets/project2.jpeg"
     },
     {
         "id": 3,
@@ -42,7 +42,7 @@ let projectsData = [
             "Easy upgradability"
         ],
         "link": "https://github.com/afhamansari/Beep",
-        "image": "assets/project3.jpeg"
+        "image": "Assets/project3.jpeg"
     },
     {
         "id": 4,
@@ -57,7 +57,7 @@ let projectsData = [
             "Cross platform compatibility"
         ],
         "link": "https://github.com/afhamansari/booklet",
-        "image": "assets/project4.png"
+        "image": "Assets/project4.png"
     },
     {
         "id": 5,
@@ -72,7 +72,7 @@ let projectsData = [
             "Cross platform support"
         ],
         "link": "https://github.com/afhamansari/WordUp",
-        "image": "assets/project5.png"
+        "image": "Assets/project5.png"
     }
 ];
 
