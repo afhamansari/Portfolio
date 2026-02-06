@@ -8,12 +8,12 @@ let projectsData = [
         "fullDescription": "A line follower bot using PID algorithm, it uses a 5 channel infrared sensor array to track the line, an arduino nano for computation, a motor driver with 2 small dc motors and battery module with a 3d printed body",
         "tags": ["C++"],
         "features": [
-            "Automated path finding",
+            "Atuomated path finding",
             "Continuous error correction",
             "Modular design"
         ],
         "link": "https://github.com/afhamansari/Evo-fox-line-follower-",
-        "image": "assets/project1.jpeg"
+        "image": "Assets/project1.jpeg"
     },
     {
         "id": 2,
@@ -27,14 +27,14 @@ let projectsData = [
             "Versatile applications",
         ],
         "link": "https://github.com/afhamansari/Tracy",
-        "image": "assets/project2.jpeg"
+        "image": "Assets/project2.jpeg"
     },
     {
         "id": 3,
         "number": "03",
         "title": "Beep",
         "shortDescription": "A small handheld 8 bit style game console powered by esp8266",
-        "fullDescription": "Beep is a small handheld game console, it runs games like snake, flappy bird, tetris and space invaders, along with these it can also be used for wifi packet tracking, a timer and a stopwatch, the setup is very user friendly and allows users to code their own application for beep",
+        "fullDescription": "Beep is a small handheld game console, it runs games like snake, flappy bird, tetris and space inavders, along with these it can also be used for wifi packet tracking, a timer and a stopwatch, the setup is very user friendly and allows users to code thier own application for beep",
         "tags": ["C++"],
         "features": [
             "Multiple retro style games",
@@ -42,14 +42,14 @@ let projectsData = [
             "Easy upgradability"
         ],
         "link": "https://github.com/afhamansari/Beep",
-        "image": "assets/project3.jpeg"
+        "image": "Assets/project3.jpeg"
     },
     {
         "id": 4,
         "number": "04",
         "title": "Book-let",
         "shortDescription": "A place to help readers share books",
-        "fullDescription": "Book-let provides a place to allow people to share books with each other, you can borrow the books other people are willing to lend or if you have books lying around that you wish to share with people then you can lend them here, creating a social network of readers.",
+        "fullDescription": "Book-let provides a place to allow people to share books with each other, you can borrow the books other people are willing to lend or if you have books lieing around that you wish to share with people then you can lend them here, creating a social network of readers.",
         "tags": ["HTML", "CSS", "Javascript", "Google API"],
         "features": [
             "Scalability",
@@ -57,14 +57,14 @@ let projectsData = [
             "Cross platform compatibility"
         ],
         "link": "https://github.com/afhamansari/booklet",
-        "image": "assets/project4.png"
+        "image": "Assets/project4.png"
     },
     {
         "id": 5,
         "number": "05",
         "title": "WordUp",
         "shortDescription": "A flashcard based vocabulary learning mobile app",
-        "fullDescription": "A flashcard app to improve your vocabulary, Word up makes learning fun and engaging, you can learn new words or polish up your existing vocabulary, words up makes it easier for people to connect to their roots or pick up a new language in a non-boring way.",
+        "fullDescription": "A flashcard app to improve your vocabulary, Word up makes learning fun and engaging, you can learn new words or polish up your existing vocabulary, words up makes it easier for people to connect to thier roots or pick up a new language in a non-boring way.",
         "tags": ["reactnative", "javascript",],
         "features": [
             "Engaging lessons",
@@ -72,7 +72,7 @@ let projectsData = [
             "Cross platform support"
         ],
         "link": "https://github.com/afhamansari/WordUp",
-        "image": "assets/project5.png"
+        "image": "Assets/project5.png"
     }
 ];
 
@@ -104,7 +104,7 @@ function renderProjects() {
         projectCard.innerHTML = `
             <div class="project-number">${project.number}</div>
             <div class="project-image">
-                ${project.image ? `<img src="${project.image}" alt="${project.title}" loading="lazy" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\\'placeholder-image\\'></div>';">` : '<div class="placeholder-image"></div>'}
+                ${project.image ? `<img src="${project.image}" alt="${project.title}" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\\'placeholder-image\\'></div>';">` : '<div class="placeholder-image"></div>'}
             </div>
             <div class="project-info">
                 <h3 class="project-title">${project.title}</h3>
@@ -142,7 +142,7 @@ window.openProjectModal = function(projectId) {
     // Populate modal image
     const modalImageContainer = modal.querySelector('.modal-project-image');
     if (project.image) {
-        modalImageContainer.innerHTML = `<img src="${project.image}" alt="${project.title}" loading="lazy" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\\'placeholder-image\\'></div>';">`;
+        modalImageContainer.innerHTML = `<img src="${project.image}" alt="${project.title}" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\\'placeholder-image\\'></div>';">`;
     } else {
         modalImageContainer.innerHTML = '<div class="placeholder-image"></div>';
     }
