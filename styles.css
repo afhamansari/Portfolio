@@ -442,10 +442,10 @@ body {
 }
 
 .project-description {
-    font-size: 0.95rem;
+    font-size: 1rem;
     line-height: 1.6;
+    margin-bottom: 1.5rem;
     opacity: 0.8;
-    margin-bottom: 1.25rem;
 }
 
 .project-tags {
@@ -456,22 +456,28 @@ body {
 }
 
 .tag {
-    padding: 0.35rem 0.85rem;
+    padding: 0.4rem 0.8rem;
     background: var(--color-bg);
     border-radius: 20px;
     font-size: 0.8rem;
-    font-weight: 500;
+    font-weight: 600;
     border: 1px solid var(--color-border);
+    transition: all 0.3s ease;
+}
+
+.tag:hover {
+    border-color: var(--color-accent);
+    transform: translateY(-2px);
 }
 
 .project-link {
-    font-family: var(--font-display);
-    font-weight: 600;
     color: var(--color-accent);
     text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
     display: inline-flex;
     align-items: center;
-    transition: var(--transition);
+    gap: 0.5rem;
 }
 
 .project-link:hover {
@@ -480,7 +486,7 @@ body {
 
 /* Contact Page */
 .contact-content {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -489,10 +495,10 @@ body {
 }
 
 .contact-left {
-    animation: slideInLeft 0.8s ease;
+    animation: fadeInLeft 0.8s ease;
 }
 
-@keyframes slideInLeft {
+@keyframes fadeInLeft {
     from {
         opacity: 0;
         transform: translateX(-50px);
@@ -506,19 +512,15 @@ body {
 .contact-intro {
     font-size: 1.15rem;
     line-height: 1.8;
+    margin-bottom: 3rem;
     opacity: 0.85;
-    margin-bottom: 2.5rem;
+    max-width: 500px;
 }
 
 .contact-illustration {
     width: 100%;
-    max-width: 300px;
-    margin-top: 2rem;
-}
-
-.contact-illustration svg {
-    width: 100%;
-    height: auto;
+    max-width: 350px;
+    margin: 2rem auto 0;
 }
 
 .envelope-img {
@@ -528,7 +530,18 @@ body {
 }
 
 .contact-right {
-    animation: slideInRight 0.8s ease;
+    animation: fadeInRight 0.8s ease;
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .contact-info-card {
@@ -536,6 +549,11 @@ body {
     border-radius: 16px;
     padding: 3rem;
     box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.contact-info-card:hover {
+    box-shadow: var(--shadow-hover);
 }
 
 .contact-card-title {
@@ -554,25 +572,41 @@ body {
 
 .contact-item {
     display: flex;
-    gap: 1.25rem;
     align-items: flex-start;
+    gap: 1.25rem;
+    padding: 1.5rem;
+    background: var(--color-bg);
+    border-radius: 12px;
+    transition: var(--transition);
+}
+
+.contact-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
 }
 
 .contact-icon {
     width: 48px;
     height: 48px;
-    background: var(--color-bg);
+    min-width: 48px;
+    background: var(--color-accent);
+    color: #fff;
     border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-shrink: 0;
+    transition: var(--transition);
+}
+
+.contact-item:hover .contact-icon {
+    transform: scale(1.1);
 }
 
 .contact-details {
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
+    flex: 1;
 }
 
 .contact-label {
@@ -584,21 +618,22 @@ body {
 }
 
 .contact-value {
-    font-family: var(--font-display);
-    font-size: 1.15rem;
+    font-size: 1.05rem;
     font-weight: 600;
-    color: var(--color-accent);
+    color: var(--color-text);
     text-decoration: none;
     transition: var(--transition);
+    word-break: break-word;
 }
 
 .contact-value:hover {
-    opacity: 0.7;
+    color: var(--color-accent);
 }
 
 .contact-cta {
     padding-top: 2rem;
     border-top: 1px solid var(--color-border);
+    text-align: center;
 }
 
 .cta-text {
@@ -607,36 +642,37 @@ body {
 }
 
 .cta-subtext {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     opacity: 0.7;
-    line-height: 1.6;
 }
 
 /* Footer */
 .footer {
     text-align: center;
     padding: 2rem;
+    background: rgba(255, 255, 255, 0.8);
     border-top: 1px solid var(--color-border);
-    opacity: 0.6;
-    font-size: 0.9rem;
+    margin-top: 4rem;
 }
 
-/* Modal Styles */
+/* Modal */
 .modal {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: 2000;
-    display: none;
+    padding: 2rem;
     align-items: center;
     justify-content: center;
-    padding: 2rem;
+    opacity: 0;
+    transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal.active {
-    display: flex;
+    opacity: 1;
 }
 
 .modal-overlay {
@@ -645,66 +681,52 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0);
-    backdrop-filter: blur(0px);
-    cursor: pointer;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal.active .modal-overlay {
-    background: rgba(0, 0, 0, 0.75);
-    backdrop-filter: blur(8px);
 }
 
 .modal-content {
     position: relative;
     background: var(--color-card-bg);
     border-radius: 24px;
-    max-width: 700px;
+    max-width: 900px;
     width: 100%;
     max-height: 85vh;
     overflow-y: auto;
-    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    transform: scale(0.9);
+    transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
     z-index: 1;
-    opacity: 0;
-    transform: scale(0.9) translateY(30px);
-    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .modal.active .modal-content {
-    opacity: 1;
-    transform: scale(1) translateY(0);
+    transform: scale(1);
 }
 
 .modal-close {
     position: absolute;
-    top: 1.5rem;
-    right: 1.5rem;
-    width: 44px;
-    height: 44px;
+    top: 2rem;
+    right: 2rem;
+    width: 48px;
+    height: 48px;
     border: none;
     background: var(--color-bg);
     border-radius: 50%;
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 2;
+    transition: var(--transition);
+    z-index: 10;
     color: var(--color-text);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    font-weight: 300;
-    line-height: 1;
 }
 
 .modal-close:hover {
     background: var(--color-accent);
     color: #fff;
-    transform: rotate(90deg) scale(1.1);
-}
-
-.modal-close:active {
-    transform: rotate(90deg) scale(0.95);
+    transform: rotate(90deg);
 }
 
 .modal-body {
@@ -712,18 +734,9 @@ body {
 }
 
 .modal-image-container {
-    width: 100%;
-    margin-bottom: 2rem;
-    border-radius: 16px;
+    margin: -3rem -3rem 2rem -3rem;
+    border-radius: 24px 24px 0 0;
     overflow: hidden;
-    opacity: 0;
-    transform: scale(0.95);
-    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 0.1s;
-}
-
-.modal.active .modal-image-container {
-    opacity: 1;
-    transform: scale(1);
 }
 
 .modal-project-image {
@@ -1011,6 +1024,16 @@ body {
     .home-content {
         grid-template-columns: 1fr;
         text-align: center;
+        gap: 3rem;
+        padding: 2rem 0;
+    }
+    
+    .home-left {
+        order: -1;
+    }
+    
+    .illustration {
+        max-width: 300px;
     }
     
     .home-right {
@@ -1019,8 +1042,14 @@ body {
         align-items: center;
     }
     
+    .bio {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
     .contact-content {
         grid-template-columns: 1fr;
+        gap: 3rem;
     }
     
     .contact-left {
@@ -1028,6 +1057,11 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+    
+    .contact-intro {
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -1044,12 +1078,28 @@ body {
         font-size: 0.85rem;
     }
     
+    .page {
+        padding: 2rem 1.5rem;
+    }
+    
+    .greeting {
+        font-size: 1.25rem;
+    }
+    
     .name {
         font-size: 2.5rem;
     }
     
+    .bio {
+        font-size: 1rem;
+    }
+    
     .section-title {
         font-size: 2rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
     }
     
     .projects-grid {
@@ -1061,9 +1111,25 @@ body {
         padding: 2rem;
     }
     
+    .contact-card-title {
+        font-size: 1.5rem;
+    }
+    
+    .contact-item {
+        padding: 1.25rem;
+    }
+    
+    .contact-icon {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+    }
+    
     .cta-buttons {
         flex-direction: column;
-        align-items: center;
+        align-items: stretch;
+        width: 100%;
+        max-width: 400px;
     }
     
     .btn {
@@ -1083,6 +1149,10 @@ body {
     
     .modal-body {
         padding: 2.5rem 1.5rem;
+    }
+    
+    .modal-image-container {
+        margin: -2.5rem -1.5rem 1.5rem -1.5rem;
     }
     
     .modal-project-image {
@@ -1113,12 +1183,38 @@ body {
         height: 40px;
         top: 1.25rem;
         right: 1.25rem;
+        font-size: 1.5rem;
     }
 }
 
 @media (max-width: 480px) {
+    .nav-content {
+        padding: 1rem;
+    }
+    
+    .nav-links {
+        gap: 1rem;
+    }
+    
+    .nav-link {
+        font-size: 0.8rem;
+    }
+    
     .page {
         padding: 2rem 1rem;
+    }
+    
+    .home-content {
+        gap: 2rem;
+        padding: 1rem 0;
+    }
+    
+    .illustration {
+        max-width: 250px;
+    }
+    
+    .greeting {
+        font-size: 1.1rem;
     }
     
     .name {
@@ -1126,11 +1222,79 @@ body {
     }
     
     .bio {
-        font-size: 1rem;
+        font-size: 0.95rem;
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+    }
+    
+    .section-subtitle {
+        font-size: 0.95rem;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .project-info {
+        padding: 1.5rem;
+    }
+    
+    .project-title {
+        font-size: 1.25rem;
+    }
+    
+    .project-description {
+        font-size: 0.95rem;
+    }
+    
+    .contact-info-card {
+        padding: 1.5rem;
+    }
+    
+    .contact-card-title {
+        font-size: 1.25rem;
+    }
+    
+    .contact-item {
+        padding: 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+    
+    .contact-icon {
+        width: 36px;
+        height: 36px;
+        min-width: 36px;
+    }
+    
+    .contact-icon svg {
+        width: 18px;
+        height: 18px;
+    }
+    
+    .contact-value {
+        font-size: 0.95rem;
+    }
+    
+    .cta-buttons {
+        max-width: 100%;
+    }
+    
+    .btn {
+        padding: 0.875rem 1.5rem;
+        font-size: 0.95rem;
     }
     
     .modal-body {
         padding: 2rem 1.25rem;
+    }
+    
+    .modal-image-container {
+        margin: -2rem -1.25rem 1.25rem -1.25rem;
     }
     
     .modal-project-image {
@@ -1139,10 +1303,12 @@ body {
     
     .modal-title {
         font-size: 1.5rem;
+        padding-right: 2rem;
     }
     
     .modal-number {
         font-size: 3rem;
+        top: -0.75rem;
     }
     
     .modal-close {
@@ -1150,13 +1316,42 @@ body {
         right: 1rem;
         width: 36px;
         height: 36px;
+        font-size: 1.25rem;
     }
     
     .modal-description {
-        font-size: 1rem;
+        font-size: 0.95rem;
     }
     
     .modal-features h3 {
         font-size: 1.1rem;
+    }
+    
+    .features-list li {
+        font-size: 0.95rem;
+    }
+    
+    .modal-link {
+        padding: 0.875rem 1.25rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Very small screens */
+@media (max-width: 360px) {
+    .nav-links {
+        gap: 0.75rem;
+    }
+    
+    .nav-link {
+        font-size: 0.75rem;
+    }
+    
+    .name {
+        font-size: 1.75rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
     }
 }
