@@ -13,6 +13,7 @@ let projectsData = [
             "Modular design"
         ],
         "link": "https://github.com/afhamansari/Evo-fox-line-follower-",
+        "websiteUrl": "",
         "image": "Assets/project1.jpeg"
     },
     {
@@ -27,6 +28,7 @@ let projectsData = [
             "Versatile applications",
         ],
         "link": "https://github.com/afhamansari/Tracy",
+        "websiteUrl": "",
         "image": "Assets/project2.jpeg"
     },
     {
@@ -42,21 +44,24 @@ let projectsData = [
             "Easy upgradability"
         ],
         "link": "https://github.com/afhamansari/Beep",
+        "websiteUrl": "",
         "image": "Assets/project3.jpeg"
     },
     {
         "id": 4,
         "number": "04",
-        "title": "Book-let",
-        "shortDescription": "A place to help readers share books",
-        "fullDescription": "Book-let provides a place to allow people to share books with each other, you can borrow the books other people are willing to lend or if you have books lieing around that you wish to share with people then you can lend them here, creating a social network of readers.",
-        "tags": ["HTML", "CSS", "Javascript", "Google API"],
+        "title": "Ping",
+        "shortDescription": "A simple chat app with complete database integration",
+        "fullDescription": "Ping is a simple chat app made using react, it uses supabase for backend and database, it includes text as well as media transfer.",
+        "tags": ["React", "SQL", "Database integration"],
         "features": [
             "Scalability",
-            "User first approach",
-            "Cross platform compatibility"
+            "Responsive UI",
+            "Cross platform compatibility",
+            "User Authentication"
         ],
-        "link": "https://github.com/afhamansari/booklet",
+        "link": "https://github.com/afhamansari/ping",
+        "websiteUrl": "https://ping-six-snowy.vercel.app/",
         "image": "Assets/project4.png"
     },
     {
@@ -72,7 +77,24 @@ let projectsData = [
             "Cross platform support"
         ],
         "link": "https://github.com/afhamansari/WordUp",
+        "websiteUrl": "",
         "image": "Assets/project5.png"
+    },
+    {
+        "id": 6,
+        "number": "06",
+        "title": "Book-let",
+        "shortDescription": "A place to help readers share books",
+        "fullDescription": "Book-let provides a place to allow people to share books with each other, you can borrow the books other people are willing to lend or if you have books lieing around that you wish to share with people then you can lend them here, creating a social network of readers.",
+        "tags": ["HTML", "CSS", "Javascript", "Google API"],
+        "features": [
+            "Scalability",
+            "User first approach",
+            "Cross platform compatibility"
+        ],
+        "link": "https://github.com/afhamansari/booklet",
+        "websiteUrl": "https://afhamansari.github.io/booklet/",
+        "image": "Assets/project6.png"
     }
 ];
 
@@ -112,7 +134,10 @@ function renderProjects() {
                 <div class="project-tags">
                     ${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
                 </div>
-                <a href="#" class="project-link" onclick="openProjectModal(${project.id}); return false;">View Details →</a>
+                <div class="project-links">
+                    <a href="#" class="project-link" onclick="openProjectModal(${project.id}); return false;">View Details →</a>
+                    ${project.websiteUrl ? `<a href="${project.websiteUrl}" class="project-link website-link" target="_blank" rel="noopener noreferrer">Visit Website →</a>` : ''}
+                </div>
             </div>
         `;
         
@@ -389,6 +414,18 @@ style.textContent = `
         height: 100%;
         object-fit: cover;
         border-radius: inherit;
+    }
+    
+    /* Stack project links vertically */
+    .project-links {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .project-link {
+        display: block;
+        width: 100%;
     }
 `;
 document.head.appendChild(style);
