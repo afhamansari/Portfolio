@@ -90,6 +90,7 @@ body {
     top: 0;
     left: 0;
     right: 0;
+    width: 100%;
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     z-index: 1000;
@@ -103,6 +104,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    min-width: 0;
 }
 
 .logo {
@@ -111,11 +113,14 @@ body {
     font-weight: 800;
     color: var(--color-accent);
     text-decoration: none;
+    flex-shrink: 0;
 }
 
 .nav-links {
     display: flex;
     gap: 2.5rem;
+    flex-shrink: 1;
+    min-width: 0;
 }
 
 .nav-link {
@@ -168,6 +173,11 @@ body {
     padding: 8rem 2rem;
     max-width: 1400px;
     margin: 0 auto;
+}
+
+/* Extra breathing room under the fixed nav for the hero */
+#home.page {
+    padding-top: 12rem;
 }
 
 .home-content {
@@ -822,9 +832,17 @@ body {
     }
 }
 
+/* Nav comfort zone — reduce link gap before they crowd */
+@media (max-width: 900px) {
+    .nav-links {
+        gap: 1.5rem;
+    }
+}
+
 @media (max-width: 768px) {
     .nav-links { display: none; }
 
+    .greeting,
     .name { font-size: 3.2rem; }
 
     .section-title { font-size: 2.8rem; }
@@ -843,6 +861,7 @@ body {
 }
 
 @media (max-width: 480px) {
+    .greeting,
     .name { font-size: 2.5rem; }
 
     .cta-buttons { flex-direction: column; }
