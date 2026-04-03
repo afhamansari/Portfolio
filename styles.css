@@ -105,6 +105,7 @@ body {
     justify-content: space-between;
     align-items: center;
     min-width: 0;
+    flex-wrap: wrap;
 }
 
 .logo {
@@ -858,6 +859,17 @@ body {
     .modal-link {
         justify-content: center;
     }
+    .nav-content {
+        padding: 1rem; /* Smaller padding for mobile */
+        flex-direction: column; /* Stacks logo and links vertically */
+        gap: 1rem; /* Adds space between logo and links */
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 1rem;
+        font-size: 0.9rem; /* Slightly smaller text */
+    }
 }
 
 @media (max-width: 480px) {
@@ -881,3 +893,4 @@ body {
     border-top: 1px solid var(--color-border);
     opacity: 0.6;
 }
+
