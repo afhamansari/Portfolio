@@ -1,0 +1,120 @@
+[
+    {
+        "id": 1,
+        "number": "01",
+        "title": "Evo-fox",
+        "shortDescription": "A simple line follower using a PID algorithm",
+        "fullDescription": "A line follower bot using PID algorithm, it uses a 5 channel infrared sensor array to track the line, an arduino nano for computation, a motor driver with 2 small dc motors and battery module with a 3d printed body",
+        "tags": ["C++"],
+        "features": [
+            "Atuomated path finding",
+            "Continuous error correction",
+            "Modular design"
+        ],
+        "link": "https://github.com/afhamansari/Evo-fox-line-follower-",
+        "websiteUrl": "",
+        "itchUrl": "",
+        "image": "Assets/project1.jpeg"
+    },
+    {
+        "id": 2,
+        "number": "02",
+        "title": "Tracy",
+        "shortDescription": "A prototype for a physical aim assist",
+        "fullDescription": "A versatile device that can be used for projects ranging from automated face tracking for filmmakers to drone defence systems for the military, It uses multiple python libraries like mediapipe and numpy for accurate tracking",
+        "tags": ["Python", "C++", "Computer Vision", "Machine Learning"],
+        "features": [
+            "Real time tracking",
+            "Versatile applications"
+        ],
+        "link": "https://github.com/afhamansari/Tracy",
+        "websiteUrl": "",
+        "itchUrl": "",
+        "image": "Assets/project2.jpeg"
+    },
+    {
+        "id": 3,
+        "number": "03",
+        "title": "Beep",
+        "shortDescription": "A small handheld 8 bit style game console powered by esp8266",
+        "fullDescription": "Beep is a small handheld game console, it runs games like snake, flappy bird, tetris and space inavders, along with these it can also be used for wifi packet tracking, a timer and a stopwatch, the setup is very user friendly and allows users to code thier own application for beep",
+        "tags": ["C++"],
+        "features": [
+            "Multiple retro style games",
+            "Clean UI",
+            "Easy upgradability"
+        ],
+        "link": "https://github.com/afhamansari/Beep",
+        "websiteUrl": "",
+        "itchUrl": "",
+        "image": "Assets/project3.jpeg"
+    },
+    {
+        "id": 4,
+        "number": "04",
+        "title": "Ping",
+        "shortDescription": "A simple chat app with complete database integration",
+        "fullDescription": "Ping is a simple chat app made using react, it uses supabase for backend and database, it includes text as well as media transfer.",
+        "tags": ["React", "SQL", "Database integration"],
+        "features": [
+            "Scalability",
+            "Responsive UI",
+            "Cross platform compatibility",
+            "User Authentication"
+        ],
+        "link": "https://github.com/afhamansari/ping",
+        "websiteUrl": "https://ping-six-snowy.vercel.app/",
+        "itchUrl": "",
+        "image": "Assets/project4.png"
+    },
+    {
+        "id": 5,
+        "number": "05",
+        "title": "WordUp",
+        "shortDescription": "A flashcard based vocabulary learning mobile app",
+        "fullDescription": "A flashcard app to improve your vocabulary, Word up makes learning fun and engaging, you can learn new words or polish up your existing vocabulary, words up makes it easier for people to connect to thier roots or pick up a new language in a non-boring way.",
+        "tags": ["reactnative", "javascript"],
+        "features": [
+            "Engaging lessons",
+            "Gamified learning",
+            "Cross platform support"
+        ],
+        "link": "https://github.com/afhamansari/WordUp",
+        "websiteUrl": "",
+        "itchUrl": "",
+        "image": "Assets/project5.png"
+    },
+    {
+        "id": 6,
+        "number": "06",
+        "title": "Alone",
+        "shortDescription": "A simple psychological horror game demo",
+        "fullDescription": "Alone is a draft/proof of concept for a psychological horror game I am developing.",
+        "tags": ["C#", "Unity"],
+        "features": [
+            "Complete sound design",
+            "Level design",
+            "Custom character controller"
+        ],
+        "link": "",
+        "websiteUrl": "",
+        "itchUrl": "https://afhamansari.itch.io/alone",
+        "image": "Assets/project6.png"
+    },
+    {
+        "id": 7,
+        "number": "07",
+        "title": "Book-let",
+        "shortDescription": "A place to help readers share books",
+        "fullDescription": "Book-let provides a place to allow people to share books with each other, you can borrow the books other people are willing to lend or if you have books lieing around that you wish to share with people then you can lend them here, creating a social network of readers.",
+        "tags": ["HTML", "CSS", "Javascript", "Google API"],
+        "features": [
+            "Scalability",
+            "User first approach",
+            "Cross platform compatibility"
+        ],
+        "link": "https://github.com/afhamansari/booklet",
+        "websiteUrl": "https://afhamansari.github.io/booklet/",
+        "image": "Assets/project7.png"
+    }
+]
