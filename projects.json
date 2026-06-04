@@ -123,11 +123,10 @@
         "title": "ThreadFlow",
         "shortDescription": "A place to ask your questions",
         "fullDescription": "ThreadFlow is a modern, mobile‑first social discussion app that mixes the addictive vertical scrolling of TikTok with the thoughtful Q&A structure of Reddit. Users swipe through a personalised feed of question cards, upvote or downvote answers, dive into nested threaded discussions, and create their own questions with rich tags and an optional anonymous mode. The prototype features glassmorphism UI, smooth animations, and a fully local state management, making it feel like a next‑generation discussion platform ready for real‑world deployment.",
-        "tags": ["React", "TailwindCSS", "Framer Motion", "Zustand", "Vite", "Lucide Icons"],
+        "tags": ["React", "TailwindCSS", "Vite"],
         "features": [
             "TikTok‑style full‑screen vertical snap scrolling",
-            "Nested threaded replies with expand/collapse animations",
-            "Create question modal with tag suggestions & anonymous toggle"
+            "Nested threaded replies with expand/collapse animations"
         ],
         "link": "https://github.com/afhamansari/threadflow",
         "websiteUrl": "https://threadflow-olive.vercel.app/",
