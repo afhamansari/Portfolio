@@ -121,7 +121,7 @@
         "id": 8,
         "number": "08",
         "title": "ThreadFlow",
-        "shortDescription": "A place to ask your questions",
+        "shortDescription": "Ask questions. Join the conversation",
         "fullDescription": "ThreadFlow is a modern, mobile‑first social discussion app that mixes the addictive vertical scrolling of TikTok with the thoughtful Q&A structure of Reddit. Users swipe through a personalised feed of question cards, upvote or downvote answers, dive into nested threaded discussions, and create their own questions with rich tags and an optional anonymous mode. The prototype features glassmorphism UI, smooth animations, and a fully local state management, making it feel like a next‑generation discussion platform ready for real‑world deployment.",
         "tags": ["React", "TailwindCSS", "Vite"],
         "features": [
