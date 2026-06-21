@@ -138,7 +138,7 @@
         "title": "Out of Reach",
         "shortDescription": "An old School infinite run to the top",
         "fullDescription": "Out of Reach is an old school run to the top adventure arcade game made in the godot engine using the gd script",
-        "tags": ["React", "Godot", "GD Script"],
+        "tags": ["Godot", "GD Script"],
         "features": [
             "NA",
             "NA"
