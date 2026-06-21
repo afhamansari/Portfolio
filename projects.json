@@ -131,5 +131,20 @@
         "link": "https://github.com/afhamansari/threadflow",
         "websiteUrl": "https://threadflow-olive.vercel.app/",
         "image": "Assets/project8.png"
+    },
+    {
+        "id": 9,
+        "number": "09",
+        "title": "Out of Reach",
+        "shortDescription": "An old School infinite run to the top",
+        "fullDescription": "Out of Reach is an old school run to the top adventure arcade game made in the godot engine using the gd script",
+        "tags": ["React", "Godot", "GD Script"],
+        "features": [
+            "NA",
+            "NA"
+        ],
+        "link": "https://afhamansari.itch.io/out-of-reach",
+        "websiteUrl": "",
+        "image": "Assets/project9.png"
     }
 ]
